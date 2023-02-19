@@ -1,0 +1,56 @@
+body{
+    background-color: #02D6AF
+}
+
+main{
+    background-color: #02D6AF
+}
+
+nav {
+    color: #FFFFFF;
+    width: 25%; /* Задаем ширину блока nav в 25% от родительского контейнера */
+    background-color:  #003B2E;
+    height: 712px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    float: left; /* Указываем, что блок nav должен быть выравнен по левому краю */
+}
+nav button {
+    width: 300px;
+    height: 150px;
+    background-color: #52F0A6;
+    border-radius: 0;
+    color: #000000;
+}
+nav button:hover {
+    background-color: #3ECF8E;
+    color: #FFFFFF;
+}
+nav button:active {
+    background-color: #279F67;
+    color: #FFFFFF;
+}
+main {
+    width: 75%; /* Задаем ширину блока main в 75% от родительского контейнера */
+    height: 680px;
+    margin-left: 25%; /* Устанавливаем отступ слева, чтобы блок main начинался после блока nav */
+}
+
+footer{
+    color: #FFFFFF;
+    float: bottom;
+    height: 100px;
+    background-color: #0E5744;
+}
+
+header{
+    color: #FFFFFF;
+    height: 100px;
+    background-color: #0E5744;
+}
+
+nav ul li{
+    marker: none;
+}
