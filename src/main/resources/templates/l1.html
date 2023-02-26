@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <title>main menu </title>
+
+</head>
+<body>
+<header>
+    <h1>L1</h1>
+    <form th:action="@{/main}" method="get"><button type="submit">На головну</button></form>
+
+</header>
+
+
+<div id = "L1Form">
+    <h2>Заповніть форму</h2>
+    <form th:action= "@{/l1}" method="post">
+        <table>
+            <tr>
+                <td><p>           </p></td>
+                <td><p>вінігрети</p></td>
+                <td><p>баварські піцци</p></td>
+                <td><p>окрошки</p></td>
+                <td><p>сумарна ціна</p></td>
+            </tr>
+
+            <tr>
+                <td><p>перша людина</p></td>
+                <td><input type="text" name="a00"></td>
+                <td><input type="text" name="a01"></td>
+                <td><input type="text" name="a02"></td>
+                <td><input type="text" name="a30"></td>
+            </tr>
+            <tr>
+                <td><p>друга людина</p></td>
+                <td><input type="text" name="a10"></td>
+                <td><input type="text" name="a11"></td>
+                <td><input type="text" name="a12"></td>
+                <td><input type="text" name="a31"></td>
+            </tr>
+            <tr>
+                <td><p>третя людина</p></td>
+                <td><input type="text" name="a20"></td>
+                <td><input type="text" name="a21"></td>
+                <td><input type="text" name="a22"></td>
+                <td><input type="text" name="a32"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Відправити">
+    </form>
+</div>
+
+
+<div id = "L1Results">
+    <h2>Результати</h2>
+    <table>
+        <tr>
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Vinegret_cleaned.jpg" /></td>
+            <td><img src="https://pizza.od.ua/upload/iblock/56b/56b74acd413a975b1057c172a43a2ce2.jpg" /></td>
+            <td><img src="https://cdn.lifehacker.ru/wp-content/uploads/2018/05/10-potryasayushhe-vkusnyx-receptov-okroshki_1525899224.jpg" /></td>
+
+        </tr>
+
+        <tr>
+            <td><p th:text="${result1}"></p></td>
+            <td><p th:text="${result2}"></p></td>
+            <td><p th:text="${result3}"></p></td>
+
+        </tr>
+
+    </table>
+</div>
+
+</body>
+</html>

@@ -10,12 +10,13 @@ nav {
     color: #FFFFFF;
     width: 25%; /* Задаем ширину блока nav в 25% от родительского контейнера */
     background-color:  #003B2E;
-    height: 712px;
+    height: 1157px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    float: left; /* Указываем, что блок nav должен быть выравнен по левому краю */
+    margin-left: 35%;
+
 }
 nav button {
     width: 300px;
@@ -32,11 +33,6 @@ nav button:active {
     background-color: #279F67;
     color: #FFFFFF;
 }
-main {
-    width: 75%; /* Задаем ширину блока main в 75% от родительского контейнера */
-    height: 680px;
-    margin-left: 25%; /* Устанавливаем отступ слева, чтобы блок main начинался после блока nav */
-}
 
 footer{
     color: #FFFFFF;
@@ -45,12 +41,126 @@ footer{
     background-color: #0E5744;
 }
 
+
+#L1Results{
+    width: 500px;
+    margin-left: 40%;
+    margin-top: 1%;
+    padding: 20px;
+    background-color: #279F67;
+    border-radius: 5px;
+    border-color: #003B2E;
+}
+
+#L1Results img{
+    width: 150px;
+    height: 150px;
+}
+
+#L1Results table{
+    background-color: #3ECF8E;
+}
+
+#L1Form {
+
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-gap: 10px;
+
+    width: 1100px;
+    margin-left: 25%;
+    margin-top: 5%;
+    padding: 20px;
+    background-color: #279F67;
+    border-radius: 5px;
+    border-color: #003B2E;
+}
+
+#L1Form table{
+
+    margin-top: 100px;
+    background-color: #0E5744;
+    color: #FFFFFF;
+}
+
+#L1Form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#L1Form label {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+#L1Form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    text-align: right;
+}
+
+#L1Form input[type="submit"] {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 10px;
+    background-color: #003B2E;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#L1Form input[type="submit"]:hover {
+    background-color: #52F0A6;
+    color: #FFFFFF;
+}
+
+#L1Form input[type="submit"]:active {
+    background-color: #3A8779;
+    color: #FFFFFF;
+    transform: translateY(2px);
+}
+
 header{
+    overflow: hidden;
     color: #FFFFFF;
     height: 100px;
-    background-color: #0E5744;
+    background-color: #003B2E;
+    display: flex;
+    justify-content: space-between;
+}
+
+header button {
+    width: 100px;
+    height: 75px;
+    background-color: #52F0A6;
+    border-radius: 0;
+    color: #000000;
+    float: right;
+
+}
+
+header h1{
+    float: left;
+}
+header button:hover {
+    background-color: #3ECF8E;
+    color: #FFFFFF;
+}
+header button:active {
+    background-color: #279F67;
+    color: #FFFFFF;
 }
 
 nav ul li{
     marker: none;
+}
+
+ul{
+    list-style-type: none;
 }
