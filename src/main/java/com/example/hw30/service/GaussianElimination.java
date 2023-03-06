@@ -51,27 +51,7 @@ public class GaussianElimination
         return solution;
     }
 
-    public void printRowEchelonForm(double[][] a, double[] b)
-    {
-        int n = 3;
-        System.out.println("\nRow Echelon form : ");
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < n; j++)
-                System.out.printf("%.2f ", a[i][j]);
-            System.out.printf("| %.2f\n", b[i]);
-        }
-        System.out.println();
-    }
-    /** function to print solution **/
-    public void printSolution(double[] sol)
-    {
-        int n = 3;
-        System.out.println("\nSolution : ");
-        for (int i = 0; i < n; i++)
-            System.out.printf("%.2f ", sol[i]);
-        System.out.println();
-    }
+
 
 
 }

@@ -164,3 +164,87 @@ nav ul li{
 ul{
     list-style-type: none;
 }
+
+#L2Results{
+    width: 500px;
+    margin-left: 40%;
+    margin-top: 1%;
+    padding: 20px;
+    background-color: #279F67;
+    border-radius: 5px;
+    border-color: #003B2E;
+}
+
+#L2Results img{
+    width: 150px;
+    height: 150px;
+}
+
+#L2Results table{
+    background-color: #3ECF8E;
+}
+
+#L2Form {
+
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-gap: 10px;
+
+    width: 1200px;
+    margin-left: 20%;
+    margin-top: 5%;
+    padding: 20px;
+    background-color: #279F67;
+    border-radius: 5px;
+    border-color: #003B2E;
+}
+
+#L2Form table{
+
+    margin-top: 100px;
+    background-color: #0E5744;
+    color: #FFFFFF;
+}
+
+#L2Form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#L2Form label {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+#L2Form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    text-align: right;
+}
+
+#L2Form input[type="submit"] {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 10px;
+    background-color: #003B2E;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#L2Form input[type="submit"]:hover {
+    background-color: #52F0A6;
+    color: #FFFFFF;
+}
+
+#L2Form input[type="submit"]:active {
+    background-color: #3A8779;
+    color: #FFFFFF;
+    transform: translateY(2px);
+}

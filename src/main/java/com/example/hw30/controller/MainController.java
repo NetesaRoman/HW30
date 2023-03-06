@@ -19,9 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Slf4j
 public class MainController {
 
-    private double [] results = {0d, 0d, 0d};
-
-
+    private double[] results = {0d, 0d, 0d};
 
 
     @GetMapping("/main")
@@ -41,9 +39,10 @@ public class MainController {
     }
 
 
+
     @PostMapping("/l1")
     public String l1Post(Model model,
-            @RequestParam("a00") double a00, @RequestParam("a01") double a01, @RequestParam("a02") double a02,
+                         @RequestParam("a00") double a00, @RequestParam("a01") double a01, @RequestParam("a02") double a02,
                          @RequestParam("a10") double a10, @RequestParam("a11") double a11, @RequestParam("a12") double a12,
                          @RequestParam("a20") double a20, @RequestParam("a21") double a21, @RequestParam("a22") double a22,
                          @RequestParam("a30") double a30, @RequestParam("a31") double a31, @RequestParam("a32") double a32) {
@@ -52,12 +51,12 @@ public class MainController {
         double[][] matrix = new double[3][3];
         setMatrix(a00, a01, a02, a10, a11, a12, a20, a21, a22, matrix);
 
-        double [] sums = new double[3];
+        double[] sums = new double[3];
 
         setSolutions(a30, a31, a32, sums);
 
 
-       results = gaussianElimination.solve(matrix, sums);
+        results = gaussianElimination.solve(matrix, sums);
         model.addAttribute("result1", Math.round(results[0] * 100.0) / 100.0);
         model.addAttribute("result2", Math.round(results[1] * 100.0) / 100.0);
         model.addAttribute("result3", Math.round(results[2] * 100.0) / 100.0);
@@ -83,4 +82,8 @@ public class MainController {
         matrix[2][1] = a21;
         matrix[2][2] = a22;
     }
+
+
+
+
 }
