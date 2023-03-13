@@ -1,6 +1,6 @@
 package com.example.hw30.controller;
 
-import com.example.hw30.service.exceptions.IterativeSolver;
+import com.example.hw30.service.IterativeSolver;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +26,7 @@ public class L2Controller {
 
     @PostMapping("/l2")
     public String l1Post(Model model,
+                         @RequestParam("x00") double x00, @RequestParam("x01") double x01, @RequestParam("x02") double x02,@RequestParam("x03") double x03,
                          @RequestParam("a00") double a00, @RequestParam("a01") double a01, @RequestParam("a02") double a02,@RequestParam("a03") double a03,
                          @RequestParam("a10") double a10, @RequestParam("a11") double a11, @RequestParam("a12") double a12,@RequestParam("a13") double a13,
                          @RequestParam("a20") double a20, @RequestParam("a21") double a21, @RequestParam("a22") double a22,@RequestParam("a23") double a23,
@@ -34,6 +35,7 @@ public class L2Controller {
 
 
         double[][] matrix = new double[4][5];
+        double[] x0 = {x00, x01, x02, x03};
         setMatrix(s00, s01, s02, s03, a00,  a01,  a02,  a03,  a10, a11,  a12,  a13, a20,  a21,  a22,  a23, a30, a31,  a32,  a33, matrix);
 
 
@@ -42,8 +44,14 @@ public class L2Controller {
 
 
         printMatr(matrix);
-        IterativeSolver iterativeSolver = new IterativeSolver(matrix);
+        IterativeSolver iterativeSolver = new IterativeSolver(matrix, x0);
         iterativeSolver.printInfo();
+        double[] solutions = iterativeSolver.solve();
+        model.addAttribute("result1", solutions[0]);
+        model.addAttribute("result2", solutions[1]);
+        model.addAttribute("result3", solutions[2]);
+        model.addAttribute("result4", solutions[3]);
+
 
         return "l2";
     }

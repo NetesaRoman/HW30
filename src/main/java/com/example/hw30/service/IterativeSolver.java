@@ -1,4 +1,4 @@
-package com.example.hw30.service.exceptions;
+package com.example.hw30.service;
 
 /*
  *
@@ -12,7 +12,7 @@ public class IterativeSolver {
     private double epsilon = 0.0001; // заданная точность
     private int maxIterations = 1000; // максимальное количество итераций
 
-    public IterativeSolver(double[][] matrix){
+    public IterativeSolver(double[][] matrix, double[] x0){
         for (int i = 0;i < 4 ;i++){
             for (int j = 0;j < 4 ;j++){
                 A[i][j] = matrix[i][j];
@@ -21,10 +21,12 @@ public class IterativeSolver {
 
         for (int i = 0; i < 4; i++){
             b[i] = matrix[i][4];
+            this.x0[i] = x0[i];
         }
+
     }
 
-    public void solve() {
+    public double[] solve() {
 
 
         // вычисление матрицы перехода
@@ -67,6 +69,8 @@ public class IterativeSolver {
         for (int i = 0; i < 4; i++) {
             System.out.println("x[" + i + "] = " + x[i]);
         }
+
+        return x;
     }
 
     // проверка на достижение заданной точности
@@ -90,6 +94,11 @@ public class IterativeSolver {
         System.out.println("-----------");
         for(int i = 0; i < 4 ; i++){
             System.out.print(b[i] + " ");
+        }
+
+        System.out.println("x0----------");
+        for(int i = 0; i < 4 ; i++){
+            System.out.print(x0[i] + " ");
         }
     }
 }

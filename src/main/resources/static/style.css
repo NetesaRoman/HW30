@@ -166,8 +166,8 @@ ul{
 }
 
 #L2Results{
-    width: 500px;
-    margin-left: 40%;
+    width: 650px;
+    margin-left: 35%;
     margin-top: 1%;
     padding: 20px;
     background-color: #279F67;
@@ -182,6 +182,13 @@ ul{
 
 #L2Results table{
     background-color: #3ECF8E;
+    border-collapse: collapse;
+}
+
+#L2Results td {
+    border: 1px solid black;
+    width: 25%;
+    padding: 5px;
 }
 
 #L2Form {
@@ -190,8 +197,8 @@ ul{
     grid-template-columns: repeat(3, 3fr);
     grid-gap: 10px;
 
-    width: 1200px;
-    margin-left: 20%;
+    width: 1370px;
+    margin-left: 18%;
     margin-top: 5%;
     padding: 20px;
     background-color: #279F67;
