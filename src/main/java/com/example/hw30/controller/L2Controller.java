@@ -26,6 +26,7 @@ public class L2Controller {
 
     @PostMapping("/l2")
     public String l1Post(Model model,
+                         @RequestParam("e") double e,
                          @RequestParam("x00") double x00, @RequestParam("x01") double x01, @RequestParam("x02") double x02,@RequestParam("x03") double x03,
                          @RequestParam("a00") double a00, @RequestParam("a01") double a01, @RequestParam("a02") double a02,@RequestParam("a03") double a03,
                          @RequestParam("a10") double a10, @RequestParam("a11") double a11, @RequestParam("a12") double a12,@RequestParam("a13") double a13,
@@ -44,7 +45,7 @@ public class L2Controller {
 
 
         printMatr(matrix);
-        IterativeSolver iterativeSolver = new IterativeSolver(matrix, x0);
+        IterativeSolver iterativeSolver = new IterativeSolver(matrix, x0, e);
         iterativeSolver.printInfo();
         double[] solutions = iterativeSolver.solve();
         model.addAttribute("result1", solutions[0]);

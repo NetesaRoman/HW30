@@ -12,7 +12,7 @@ public class IterativeSolver {
     private double epsilon = 0.0001; // заданная точность
     private int maxIterations = 1000; // максимальное количество итераций
 
-    public IterativeSolver(double[][] matrix, double[] x0){
+    public IterativeSolver(double[][] matrix, double[] x0, double e){
         for (int i = 0;i < 4 ;i++){
             for (int j = 0;j < 4 ;j++){
                 A[i][j] = matrix[i][j];
@@ -24,6 +24,7 @@ public class IterativeSolver {
             this.x0[i] = x0[i];
         }
 
+        this.epsilon = e;
     }
 
     public double[] solve() {
