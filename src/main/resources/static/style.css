@@ -255,3 +255,68 @@ ul{
     color: #FFFFFF;
     transform: translateY(2px);
 }
+
+#L3Form {
+
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-gap: 10px;
+
+    width: 1370px;
+    margin-left: 18%;
+    margin-top: 5%;
+    padding: 20px;
+    background-color: #279F67;
+    border-radius: 5px;
+    border-color: #003B2E;
+}
+
+#L3Form table{
+
+    margin-top: 100px;
+    background-color: #0E5744;
+    color: #FFFFFF;
+}
+
+#L3Form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#L3Form label {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+#L3Form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    text-align: right;
+}
+
+#L3Form input[type="submit"] {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 10px;
+    background-color: #003B2E;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#L3Form input[type="submit"]:hover {
+    background-color: #52F0A6;
+    color: #FFFFFF;
+}
+
+#L3Form input[type="submit"]:active {
+    background-color: #3A8779;
+    color: #FFFFFF;
+    transform: translateY(2px);
+}

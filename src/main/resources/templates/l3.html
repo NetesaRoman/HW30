@@ -14,7 +14,53 @@
 </header>
 
 
+<div id = "L3Form">
+    <h2>Заповніть форму</h2>
+    <form th:action= "@{/l3}" method="post">
+        <table>
+            <tr>
+                <td><p>           </p></td>
+                <td><p>a</p></td>
+                <td><p>b</p></td>
+                <td><p>c</p></td>
+                <td><p>d</p></td>
+
+            </tr>
+
+            <tr>
+                <td><p>        </p></td>
+                <td><input type="text" name="a"></td>
+                <td><input type="text" name="b"></td>
+                <td><input type="text" name="c"></td>
+                <td><input type="text" name="d"></td>
+            </tr>
+
+        </table>
+        <label>step</label>
+        <input type="text" name="step">
+        <label>high end</label>
+        <input type="text" name="high">
+        <label>low end</label>
+        <input type="text" name="low">
+        <input type="submit" value="Відправити">
+    </form>
+</div>
+
+<div id = "L2Results">
+    <h2>Результат</h2>
+    <table>
+        <tr>
+            <td><h3>x</h3></td>
 
 
+        </tr>
+
+        <tr>
+            <td><p th:text="${result}"></p></td>
+
+        </tr>
+
+    </table>
+</div>
 </body>
 </html>

@@ -13,13 +13,13 @@ public class DichotomyMethod {
 
     private static final double DELTA = 0.0001;// accuracy level
 
-    public static void count(PolynomialFunction function, double a, double b) {
+    public static double count(PolynomialFunction function, double a, double b) {
         double midpoint;
         for (int i = 0; i < MAX; i++) {
             midpoint = (a + b) / 2;
             if (function.value(midpoint) == 0 || Math.abs((a - b)) / 2 < DELTA) {
-                System.out.println("x = " + midpoint + " is a root of the function within the given interval");
-                return;
+
+                return midpoint;
             }
             System.out.println("Iteration " + (i + 1) + ". Value of midpoint: " + midpoint);
             //compare f(a), f(b) and f(midpoint) and create a new interval
@@ -29,6 +29,8 @@ public class DichotomyMethod {
                 b = midpoint;
             }
         }
+        return -666;
     }
+
 
 }
