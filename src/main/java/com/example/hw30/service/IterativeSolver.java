@@ -24,7 +24,7 @@ public class IterativeSolver {
             this.x0[i] = x0[i];
         }
 
-        this.epsilon = e;
+        this.epsilon = e; 
     }
 
     public double[] solve() {
