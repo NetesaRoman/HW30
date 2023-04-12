@@ -36,8 +36,6 @@
             </tr>
 
         </table>
-        <label>step</label>
-        <input type="text" name="step">
         <label>high end</label>
         <input type="text" name="high">
         <label>low end</label>
@@ -50,13 +48,17 @@
     <h2>Результат</h2>
     <table>
         <tr>
-            <td><h3>x</h3></td>
+            <td><h3>Дихтомія</h3></td>
+            <td><h3>Фібоначі</h3></td>
+            <td><h3>Золотий перетин</h3></td>
 
 
         </tr>
 
         <tr>
-            <td><p th:text="${result}"></p></td>
+            <td><p th:text="${result_dichtomy}"></p></td>
+            <td><p th:text="${result_fibo}"></p></td>
+            <td><p th:text="${result_golden}"></p></td>
 
         </tr>
 
