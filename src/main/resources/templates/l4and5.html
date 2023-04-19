@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <title>Lab4 and 5 </title>
+
+</head>
+<body>
+<header>
+    <h1>L4 and 5</h1>
+    <form th:action="@{/main}" method="get"><button type="submit">На головну</button></form>
+
+</header>
+
+
+<div id = "L3Form">
+    <h2>Заповніть форму</h2>
+    <form th:action= "@{/l4and5}" method="post">
+        <table>
+            <tr>
+                <td><p>           </p></td>
+                <td><p>March</p></td>
+                <td><p>April</p></td>
+                <td><p>May</p></td>
+                <td><p>June</p></td>
+                <td><p>July</p></td>
+
+            </tr>
+
+            <tr>
+                <td><p>        </p></td>
+                <td><input type="text" name="march"></td>
+                <td><input type="text" name="april"></td>
+                <td><input type="text" name="may"></td>
+                <td><input type="text" name="june"></td>
+                <td><input type="text" name="july"></td>
+            </tr>
+
+        </table>
+
+        <input type="submit" value="Відправити">
+    </form>
+</div>
+
+<div id = "L2Results">
+    <h2>Результат</h2>
+    <h3>Інтерполяція</h3>
+    <table>
+        <tr>
+            <td><h3>1</h3></td>
+            <td><h3>2</h3></td>
+            <td><h3>3</h3></td>
+            <td><h3>4</h3></td>
+            <td><h3>5</h3></td>
+
+        </tr>
+
+        <tr>
+            <td><p th:text="${result1}"></p></td>
+            <td><p th:text="${result2}"></p></td>
+            <td><p th:text="${result3}"></p></td>
+            <td><p th:text="${result4}"></p></td>
+            <td><p th:text="${result5}"></p></td>
+
+        </tr>
+
+    </table>
+
+    <h3>Апроксимація</h3>
+    <h3>поліном першого ступеню</h3>
+    <table>
+        <tr>
+            <td><h3>1</h3></td>
+            <td><h3>2</h3></td>
+            <td><h3>Помилка</h3></td>
+
+        </tr>
+
+        <tr>
+            <td><p th:text="${f1}"></p></td>
+            <td><p th:text="${f2}"></p></td>
+            <td><p th:text="${ferr}"></p></td>
+
+
+        </tr>
+
+    </table>
+
+    <h3>поліном другого ступеню</h3>
+    <table>
+        <tr>
+            <td><h3>1</h3></td>
+            <td><h3>2</h3></td>
+            <td><h3>3</h3></td>
+            <td><h3>Помилка</h3></td>
+
+        </tr>
+
+        <tr>
+            <td><p th:text="${s1}"></p></td>
+            <td><p th:text="${s2}"></p></td>
+            <td><p th:text="${s3}"></p></td>
+            <td><p th:text="${serr}"></p></td>
+
+
+        </tr>
+
+    </table>
+
+    <h3>Висновок</h3>
+    <p th:text="${resultBetter}"></p>
+</div>
+</body>
+</html>
