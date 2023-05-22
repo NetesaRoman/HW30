@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <title>Lab6 </title>
+
+</head>
+<body>
+<header>
+    <h1>L6</h1>
+    <form th:action="@{/main}" method="get"><button type="submit">На головну</button></form>
+
+</header>
+
+
+<div id = "L2Form">
+    <h2>Заповніть форму</h2>
+
+    <form th:action= "@{/l6}" method="post">
+        <label>n of divisions</label>
+        <input type="text" name="n">
+        <input type="submit" value="Відправити">
+    </form>
+</div>
+
+<div id = "L2Results">
+    <h2>Результат</h2>
+    <table>
+        <tr>
+            <td><h3>Сімпсон</h3></td>
+            <td><h3>трапеції</h3></td>
+            <td><h3>прямокутники</h3></td>
+
+
+        </tr>
+
+        <tr>
+            <td><p th:text="${Simpson}"></p></td>
+            <td><p th:text="${Trapezoid}"></p></td>
+            <td><p th:text="${Rectangle}"></p></td>
+
+        </tr>
+
+    </table>
+</div>
+</body>
+</html>
