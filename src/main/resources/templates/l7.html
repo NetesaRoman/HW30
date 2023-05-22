@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <title>Lab7 </title>
+
+</head>
+<body>
+<header>
+    <h1>L7</h1>
+    <form th:action="@{/main}" method="get"><button type="submit">На головну</button></form>
+
+</header>
+
+
+<div id = "L2Form">
+    <h2>Заповніть форму</h2>
+
+    <form th:action= "@{/l7}" method="post">
+
+        <input type="submit" value="Відправити">
+    </form>
+</div>
+
+<div id = "L2Results">
+    <h2>Результат</h2>
+    <table>
+        <tr>
+            <td><h3>X</h3></td>
+            <td><h3>Y (Ейлер)</h3></td>
+            <td><h3>Y (Рунге-Кутта)</h3></td>
+
+
+        </tr>
+
+        <tr th:each="item, index : ${x}">
+            <td th:text="${item}"></td>
+            <td th:text="${Eiler[index.index]}"></td>
+            <td th:text="${Runge[index.index]}"></td>
+        </tr>
+
+    </table>
+</div>
+</body>
+</html>
